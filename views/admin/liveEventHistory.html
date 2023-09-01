@@ -163,7 +163,7 @@
                                </span>-->
                             </a>
                         </li>
-                        <?php
+                        
                            }
                         ?>
                         <li>
@@ -235,16 +235,79 @@
                                 <p class="text-muted font-13 m-b-30">
 
                                 </p>
+                                <!-- ... [The rest of the HTML code remains unchanged] ... -->
 
-                                <table id="datatable-buttons" class="table table-striped table-bordered">
-                                    <thead>
-                                    <tr>
-                                        <th>Candidate</th>
-                                        <th>Applied position</th>
-                                        <th>email</th>
-                                        <th>Contact</th>
-                                        <th>Process</th>
-                                        <!-- <th>Actions</th> -->
+<div class="x_content">
+    <p class="text-muted font-13 m-b-30"></p>
+
+    <table id="datatable-buttons" class="table table-striped table-bordered">
+        <thead>
+        <tr>
+            <th>Candidate</th>
+            <th>Applied position</th>
+            <th>Email</th>
+            <th>Contact</th>
+            <th>Start Date of Leave</th>
+            <th>End Date of Leave</th>
+            <th>Number of Leaves</th>
+            <th>Process</th>
+        </tr>
+        </thead>
+        <tbody>
+        <?php
+        foreach ($events as $event){
+        ?>
+        <tr>
+            <td><?=$event['candidate']?></td>
+            <td><?=$event['position']?></td>
+            <td><?=$event['email']?></td>
+            <td><?=$event['contact']?></td>
+            <td><input type="date" class="leave-start-date" data-candidate-id="<?=$event['id']?>"></td>
+            <td><input type="date" class="leave-end-date" data-candidate-id="<?=$event['id']?>"></td>
+            <td><span class="leave-count" data-candidate-id="<?=$event['id']?>"></span></td>
+            <td>
+                <?php
+                if($event['status']==1){
+                    echo "Due Event";
+                }else{
+                    echo "Event Abandon";
+                }
+                ?>
+            </td>
+        </tr>
+        <?php
+       }
+        ?>
+        </tbody>
+    </table>
+</div>
+
+<!-- ... [The rest of the HTML code remains unchanged] ... -->
+
+<script>
+    // JavaScript to calculate the number of leaves based on the start and end dates
+    document.querySelectorAll('.leave-start-date, .leave-end-date').forEach(input => {
+        input.addEventListener('change', function() {
+            const candidateId = this.dataset.candidateId;
+            const startDateInput = document.querySelector(`.leave-start-date[data-candidate-id="${candidateId}"]`);
+            const endDateInput = document.querySelector(`.leave-end-date[data-candidate-id="${candidateId}"]`);
+            const leaveCountSpan = document.querySelector(`.leave-count[data-candidate-id="${candidateId}"]`);
+
+            const startDate = new Date(startDateInput.value);
+            const endDate = new Date(endDateInput.value);
+
+            if (startDate && endDate) {
+                const diffTime = Math.abs(endDate - startDate);
+                const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)) + 1; // +1 to include both start and end dates
+                leaveCountSpan.textContent = diffDays;
+            } else {
+                leaveCountSpan.textContent = '';
+            }
+        });
+    });
+</script>
+
+
                                     </tr>
                                     </thead>
                                     <tbody>
@@ -271,7 +334,7 @@
                                    }
                                     ?>
                                     </tbody>
-                                </table>
+                                </table> -->
                             </div>
                         </div>
                     </div>
