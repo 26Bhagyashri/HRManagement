@@ -16,14 +16,14 @@ button:focus-visible {
 a {
   text-decoration: none;
 }
-@import url("https://fonts.googleapis.com/css?family=Inter:600|Poppins:500,600");
+@import url("https://fonts.googleapis.com/css?family=Poppins:500,600");
+@font-face {
+  font-family: "Product Sans-Bold";
+  src: url("https://anima-uploads.s3.amazonaws.com/596db24aa0dc3c000d9a4ed2/product-sans-bold.ttf") format("truetype");
+}
+
 @font-face {
   font-family: "Product Sans-Regular";
   src: url("https://anima-uploads.s3.amazonaws.com/projects/63a03f64f2f3033b65ac384a/fonts/idealsans-book.otf")
     format("opentype");
-}
-
-@font-face {
-  font-family: "Product Sans-Bold";
-  src: url("https://anima-uploads.s3.amazonaws.com/596db24aa0dc3c000d9a4ed2/product-sans-bold.ttf") format("truetype");
 }
