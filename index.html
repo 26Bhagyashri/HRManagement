@@ -20,10 +20,33 @@
 
     <!-- Custom Theme Style -->
     <link href="resource/css/custom.css" rel="stylesheet">
-    <script src="../../resource/js/login.js"></script>
+    <script src="../../resource/js/login.js">
+        
+
+        
+    #particles-js {
+        position: fixed;   /* Fixed position */
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;  /* Appear behind content */
+    }
+    
+
+
+        
+    </script>
 </head>
 
 <body class="login">
+    <div id="particles-js">
+        
+        
+
+        
+    </div>
+
 <div>
     <a class="hiddenanchor" id="signup"></a>
     <a class="hiddenanchor" id="signin"></a>
@@ -101,6 +124,26 @@
         </div>
     </div>
 </div>
+<!-- Particle.js CDNs -->
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script>
+    particlesJS('particles-js',
+      {
+        "particles": {
+          "number": {
+            "value": 80,
+            "density": {
+              "enable": true,
+              "value_area": 800
+            }
+          },
+          ...
+          ...
+        }
+      }
+    );
+</script>
+
 </body>
 
 </html>
