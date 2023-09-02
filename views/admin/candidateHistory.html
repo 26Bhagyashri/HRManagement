@@ -212,7 +212,7 @@
                     <div class="col-md-12 col-sm-12 col-xs-12">
                         <div class="x_panel">
                             <div class="x_title">
-                                <h2>RESUME SHORLIST <small></small></h2>
+                                <h2>RESUME SHORT LIST <small></small></h2>
                                 <ul class="nav navbar-right panel_toolbox">
                                     <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                                     </li>
@@ -247,9 +247,6 @@
             <th>Applied position</th>
             <th>Email</th>
             <th>Contact</th>
-            <th>Start Date of Leave</th>
-            <th>End Date of Leave</th>
-            <th>Number of Leaves</th>
             <th>Process</th>
         </tr>
         </thead>
@@ -262,9 +259,7 @@
             <td><?=$event['position']?></td>
             <td><?=$event['email']?></td>
             <td><?=$event['contact']?></td>
-            <td><input type="date" class="leave-start-date" data-candidate-id="<?=$event['id']?>"></td>
-            <td><input type="date" class="leave-end-date" data-candidate-id="<?=$event['id']?>"></td>
-            <td><span class="leave-count" data-candidate-id="<?=$event['id']?>"></span></td>
+           
             <td>
                 <?php
                 if($event['status']==1){
