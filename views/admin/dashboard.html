@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
 
-    <title>Human Resource Management Sysytem</title>
+    <title>Human Resource Management System</title>
 
     <!-- Bootstrap -->
     <link href="../../resource/css/bootstrap.css" rel="stylesheet">
@@ -29,10 +29,10 @@
 
     <link rel="stylesheet" href="../../resource/css/globals.css" />
     <link rel="stylesheet" href="../../resource/css/styles.css" />
-
+    <link rel="stylesheet" href="../../resource/css/weather.css" />
 </head>
 
-<body class="nav-md">
+<body class="nav-md"  onload="DefaultScreen()">
 <div class="container body">
     <div class="main_container">
 
@@ -788,111 +788,52 @@
                         <!-- End to do list -->
 
                         <!-- start of weather widget -->
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <div class="x_panel">
-                                <div class="x_title">
-                                    <h2>Daily active users <small>Sessions</small></h2>
-                                    <ul class="nav navbar-right panel_toolbox">
-                                        <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                                        </li>
-                                        <li class="dropdown">
-                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                                            <ul class="dropdown-menu" role="menu">
-                                                <li><a href="#">Settings 1</a>
-                                                </li>
-                                                <li><a href="#">Settings 2</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li><a class="close-link"><i class="fa fa-close"></i></a>
-                                        </li>
-                                    </ul>
-                                    <div class="clearfix"></div>
+                        <div class="inline-d-flex mt-5">
+                            <h2 id="heading"><b>Today's Weather</b>
+                            <p id="inputContainer" style="float: right;">City: <input type="text" id="cityInput">
+                                <button type="button" onclick="GetInfo()">Search</button>
+                            </p></h2>
+                        
+                        </div>
+                        
+                        <div class = "icons1">
+                            <h2 id="cityName" style="text-align: center;">Delhi</h2>
+                            <p class="weather" id="day1"></p>
+                            <div class="image"><img src=" https://openweathermap.org/img/wn/10d@2x.png" class="imgClass" id="img1"></div>
+                            <p class="temp" id="temp">Loading...</p>
+                            <p class="humidity" id="humidity">Loading...</p>
+                            <p class="minValues" id="day1Min">Loading...</p>
+                            <p class="maxValues" id="day1Max">Loading...</p>
+                        </div>
+                        <div id = "weatherContainer">
+                            <div id="iconsContainer">    
+                                <div class = "icons">
+                                    <p class="weather" id="day2"></p>
+                                    <div class="image"><img src=" https://openweathermap.org/img/wn/10d@2x.png" class="imgClass" id="img2"></div>
+                                    <p class="minValues" id="day2Min">Loading...</p>
+                                    <p class="maxValues" id="day2Max">Loading...</p>
                                 </div>
-                                <div class="x_content">
-                                    <div class="row">
-                                        <div class="col-sm-12">
-                                            <div class="temperature"><b>Monday</b>, 07:30 AM
-                                                <span>F</span>
-                                                <span><b>C</b></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-sm-4">
-                                            <div class="weather-icon">
-                                                <canvas height="84" width="84" id="partly-cloudy-day"></canvas>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-8">
-                                            <div class="weather-text">
-                                                <h2>Texas <br><i>Partly Cloudy Day</i></h2>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-12">
-                                        <div class="weather-text pull-right">
-                                            <h3 class="degrees">23</h3>
-                                        </div>
-                                    </div>
-
-                                    <div class="clearfix"></div>
-
-                                    <div class="row weather-days">
-                                        <div class="col-sm-2">
-                                            <div class="daily-weather">
-                                                <h2 class="day">Mon</h2>
-                                                <h3 class="degrees">25</h3>
-                                                <canvas id="clear-day" width="32" height="32"></canvas>
-                                                <h5>15 <i>km/h</i></h5>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-2">
-                                            <div class="daily-weather">
-                                                <h2 class="day">Tue</h2>
-                                                <h3 class="degrees">25</h3>
-                                                <canvas height="32" width="32" id="rain"></canvas>
-                                                <h5>12 <i>km/h</i></h5>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-2">
-                                            <div class="daily-weather">
-                                                <h2 class="day">Wed</h2>
-                                                <h3 class="degrees">27</h3>
-                                                <canvas height="32" width="32" id="snow"></canvas>
-                                                <h5>14 <i>km/h</i></h5>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-2">
-                                            <div class="daily-weather">
-                                                <h2 class="day">Thu</h2>
-                                                <h3 class="degrees">28</h3>
-                                                <canvas height="32" width="32" id="sleet"></canvas>
-                                                <h5>15 <i>km/h</i></h5>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-2">
-                                            <div class="daily-weather">
-                                                <h2 class="day">Fri</h2>
-                                                <h3 class="degrees">28</h3>
-                                                <canvas height="32" width="32" id="wind"></canvas>
-                                                <h5>11 <i>km/h</i></h5>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-2">
-                                            <div class="daily-weather">
-                                                <h2 class="day">Sat</h2>
-                                                <h3 class="degrees">26</h3>
-                                                <canvas height="32" width="32" id="cloudy"></canvas>
-                                                <h5>10 <i>km/h</i></h5>
-                                            </div>
-                                        </div>
-                                        <div class="clearfix"></div>
-                                    </div>
+                                <div class = "icons">
+                                    <p class="weather" id="day3"></p>
+                                    <div class="image"><img src=" https://openweathermap.org/img/wn/10d@2x.png" class="imgClass" id="img3"></div>
+                                    <p class="minValues" id="day3Min">Loading...</p>
+                                    <p class="maxValues" id="day3Max">Loading...</p>
+                                </div>
+                                <div class = "icons">
+                                    <p class="weather" id="day4"></p>
+                                    <div class="image"><img src=" https://openweathermap.org/img/wn/10d@2x.png" class="imgClass" id="img4"></div>
+                                    <p class="minValues" id="day4Min">Loading...</p>
+                                    <p class="maxValues" id="day4Max">Loading...</p>
+                                </div>
+                                <div class = "icons">
+                                    <p class="weather" id="day5"></p>
+                                    <div class="image"><img src=" https://openweathermap.org/img/wn/10d@2x.png" class="imgClass" id="img5"></div>
+                                    <p class="minValues" id="day5Min">Loading...</p>
+                                    <p class="maxValues" id="day5Max">Loading...</p>
                                 </div>
                             </div>
-
                         </div>
+                                           
                         <!-- end of weather widget -->
                     </div>
                 </div>
@@ -903,14 +844,15 @@
         <!-- footer content include -->
         <footer>
             <div class="pull-right">
-                Human Resource Management Sysytem by <a href="#">Uniconverge Tech</a>
+                Human Resource Management System by <a href="#">Uniconverge Tech</a>
             </div>
             <div class="clearfix"></div>
         </footer>
         <!-- /footer content include -->
     </div>
 </div>
-
+<!--weather-->
+<script src="../../resource/js/main.js"></script>
 <!-- jQuery -->
 <script src="../../resource/js/jquery.min.js"></script>
 <!-- Bootstrap -->
