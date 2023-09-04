@@ -737,7 +737,7 @@ a:focus {
 }
 .nav.child_menu li:hover,
 .nav.child_menu li.active {
-    background-color: black
+    background-color: rgba(60, 67, 82, 0.897);
 }
 .nav.child_menu li {
     padding-left: 36px
