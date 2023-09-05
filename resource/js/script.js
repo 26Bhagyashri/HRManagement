@@ -27,7 +27,7 @@ document.getElementById("send").onclick = function(){
           document.getElementById("send").innerHTML = "Profile Saved!";
         },
         error: function () {
-            alert("error");
+            alert("inserterror");
         }
     });
 }
@@ -58,7 +58,7 @@ document.getElementById("refresh").onclick = function(){
           });
         },
         error: function () {
-            alert("error");
+            alert("geterror");
         }
     });
 }
