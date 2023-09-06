@@ -2,11 +2,7 @@ var API_ENDPOINT = "https://a3gl8jr0q7.execute-api.eu-north-1.amazonaws.com/HRM/
 
 // AJAX POST REQUEST
 
-form.addEventListner('submit', e =>{
-      e.preventDefault();
-      submitForm();
-});
-const submitForm = () =>{
+document.getElementById("send").onclick = function(){
   // function function1(){
   var inputData = {
     "email": $('#email2').val(),
