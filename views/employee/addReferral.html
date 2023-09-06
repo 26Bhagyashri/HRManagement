@@ -8,8 +8,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Human Resource Management Sysytem</title>
-
+    <title>Human Resource Management System</title>
+    
     <!-- Bootstrap -->
     <link href="../../resource/css/bootstrap.css" rel="stylesheet">
     <!-- Font Awesome -->
@@ -20,7 +20,8 @@
     <link href="../../resource/css/custom.css" rel="stylesheet">
     <link href="../../resource/css/referral.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 
 </head>
 
@@ -181,7 +182,7 @@
             <div class="">
                 <div class="page-title">
                     <div class="title_left">
-                        <h3>My Referrals</h3>
+                        <h3>Referrals</h3>
                     </div>
 
                     <div class="title_right">
@@ -201,7 +202,7 @@
                     <div class="col-md-12 col-sm-12 col-xs-12">
                         <div class="x_panel">
                             <div class="x_title">
-                                <h2>Check out your active employee request <small>correctly</small></h2>
+                                <h2>Candidates That are Open to work <small>in this week</small></h2>
                                 <ul class="nav navbar-right panel_toolbox">
                                     <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                                     </li>
@@ -218,99 +219,112 @@
                                     </li>
                                 </ul>
                                 <div class="clearfix"></div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6 me-0">
-                                    <div class="rectangle" style="background-color: #172D44;color: white;width: fit-content;font-size: 16px;padding: 10px;border-radius: 8px;text-align: center;">Accepted Requests</div>
-                                    <div class="frame">
-                                        <div class="overlap">
-                                            <img src="../../resource/images/person.png" width="30px" height="30px" style="vertical-align: middle;margin-left: 50px; margin-top: 10px;"/>
-                                            <div class="text-wrapper">Bhagyashri Saundarkar</div>
-                                        </div>
-                                        <div class="overlap-group">
-                                            <img src="../../resource/images/person.png" width="30px" height="30px" style="vertical-align: middle;margin-left: 50px; margin-top: 10px;"/>
-                                                <div class="text-wrapper">Yash Yadav</div>
-                                        </div>
-                                        <div class="div">
-                                            <img src="../../resource/images/person.png" width="30px" height="30px" style="vertical-align: middle;margin-left: 50px; margin-top: 10px;"/>
-                                            <div class="text-wrapper-2">Praful Rathi</div>
-                                        </div>
-                                        <div class="overlap-2">
-                                            <img src="../../resource/images/person.png" width="30px" height="30px" style="vertical-align: middle;margin-left: 50px; margin-top: 10px;"/>
-                                            <div class="text-wrapper-3">Om Yadav</div>
-                                        </div>
-                                        <div class="overlap-3">
-                                            <img src="../../resource/images/person.png" width="30px" height="30px" style="vertical-align: middle;margin-left: 50px; margin-top: 10px;"/>
-                                            <div class="text-wrapper-4">Onkar Wartale</div>
-                                        </div>
-                                        <div class="overlap-group-2">
-                                            <img src="../../resource/images/person.png" width="30px" height="30px" style="vertical-align: middle;margin-left: 50px; margin-top: 10px;"/>
-                                            <div class="text-wrapper-4">Yogesh Rathore</div>
-                                        </div>
-                                        <div class="overlap-4">
-                                            <img src="../../resource/images/person.png" width="30px" height="30px" style="vertical-align: middle;margin-left: 50px; margin-top: 10px;"/>
-                                            <div class="text-wrapper-2">Shubhangi Sonune</div>
-                                        </div>
-                                        <div class="overlap-5">
-                                            <img src="../../resource/images/person.png" width="30px" height="30px" style="vertical-align: middle;margin-left: 50px; margin-top: 10px;"/>
-                                            <div class="text-wrapper-4">Kavita Roshan</div>
-                                        </div>
-                                        <div class="overlap-6">
-                                            <img src="../../resource/images/person.png" width="30px" height="30px" style="vertical-align: middle;margin-left: 50px; margin-top: 10px;"/>
-                                            <div class="text-wrapper-5">Gajanan Suryavanshi</div>
-                                        </div>
-                                    </div>
+                           </div>
+                           <div class="row d-flex justify-content-center align-items-center h-100">
+                            <div class="col-md-12 col-xl-10">
+                      
+                              <div class="card">
+                                <div class="card-header p-2">
+                                  <h5 class="mb-0"><i class="fa fa-tasks me-2"></i> Referral List</h5>
                                 </div>
-                                <div class="col-md-6 ms-0">
-                                    <div class="rectangle" style="background-color: #172D44;color: white;width: fit-content;font-size: 16px;padding: 10px;border-radius: 8px;text-align: center;">New Requests</div>
-                                    <div class="frame1">
-                                        <div class="overlap">
-                                            <img src="../../resource/images/person.png" width="30px" height="30px" style="vertical-align: middle;margin-left: 45px; margin-top: 20px;"/>
-                                            <div class="text-wrapper-2">Aditya Rathi</div>
-                                            <button><div class="overlap-group"><div class="text-wrapper">Accept</div></div></button>
-                                            <button><div class="div-wrapper"><div class="div">Reject</div></div></button>
+                                <div class="card-body" data-mdb-perfect-scrollbar="true" style="position: relative; height: 400px">
+                      
+                                <table class="table mb-0" id="entriesTable">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Designation</th>
+                                <th>Resume</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Bhagyashri Saundarkar</td>
+                                <td>B.Tech in IT</td>
+                                <td><span class="badge bg-warning"><a href="#">Resume.pdf</a></span></td>
+                                <td>
+                                    <button onclick="acceptEntry(this)">Accept</button>
+                                    <button onclick="rejectEntry(this)">Reject</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Priti Kumari</td>
+                                <td>MCA</td>
+                                <td><span class="badge bg-warning"><a href="#">Resume.pdf</a></span></td>
+                                <td>
+                                    <button onclick="acceptEntry(this)">Accept</button>
+                                    <button onclick="rejectEntry(this)">Reject</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Nancy Rvaliya</td>
+                                <td>B.Tech in CSE</td>
+                                <td><span class="badge bg-warning"><a href="#">Resume.pdf</a></span></td>
+                                <td>
+                                    <button onclick="acceptEntry(this)">Accept</button>
+                                    <button onclick="rejectEntry(this)">Reject</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Aditya Rathi</td>
+                                <td>BCA</td>
+                                <td><span class="badge bg-warning"><a href="#">Resume.pdf</a></span></td>
+                                <td>
+                                    <button onclick="acceptEntry(this)">Accept</button>
+                                    <button onclick="rejectEntry(this)">Reject</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Aditi Sharma</td>
+                                <td>MBA</td>
+                                <td><span class="badge bg-warning"><a href="#">Resume.pdf</a></span></td>
+                                <td>
+                                    <button onclick="acceptEntry(this)">Accept</button>
+                                    <button onclick="rejectEntry(this)">Reject</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>Raj Tripathi</td>
+                                <td>M.Tech</td>
+                                <td><span class="badge bg-warning"><a href="#">Resume.pdf</a></span></td>
+                                <td>
+                                    <button onclick="acceptEntry(this)">Accept</button>
+                                    <button onclick="rejectEntry(this)">Reject</button>
+                                </td>
+                            </tr>
+                            <!-- Add more entries here -->
+                        </tbody>
+                    </table>
+                
+                    <h2>Accepted Candidates</h2>
+                    <table id="acceptedTable">
+                        <thead style="margin-right: 30px;">
+                            <tr>
+                                <th>ID</th>
+                                
+                                <th>Name</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Accepted entries will appear here -->
+                        </tbody>
+                    </table>
+                </div>
+                <div class="card-footer p-5"></div>
+                </div>
+                
+                </div>
+                </div>
 
-                                        </div>
-                                        <div class="overlap-2">
-                                            <img src="../../resource/images/person.png" width="30px" height="30px" style="vertical-align: middle;margin-left: 45px; margin-top: 20px;"/>
-                                            <div class="text-wrapper-5">Payal Deshmukh</div>
-                                            <button><div class="overlap-3"><div class="text-wrapper-3">Accept</div></div></button>
-                                            <button><div class="overlap-4"><div class="text-wrapper-4">Reject</div></div></button>
-                                        </div>
-                                        <div class="overlap-group-2">
-                                            <img src="../../resource/images/person.png" width="30px" height="30px" style="vertical-align: middle;margin-left: 45px; margin-top: 20px;"/>
-                                            <div class="text-wrapper-6">Aditi Saundarkar</div>
-                                            <button><div class="overlap-group"><div class="text-wrapper-3">Accept</div></div></button>
-                                            <button><div class="div-wrapper"><div class="text-wrapper-4">Reject</div></div></button>
-
-                                        </div>
-                                        <div class="overlap-5">
-                                            <img src="../../resource/images/person.png" width="30px" height="30px" style="vertical-align: middle;margin-left: 50px; margin-top: 20px;"/>
-                                            <div class="text-wrapper-8">Riya Jadhav</div>
-                                            <button><div class="overlap-group"><div class="text-wrapper-7">Accept</div></div></button>
-                                            <button><div class="div-wrapper"><div class="div">Reject</div></div></button>
-                                        </div>
-                                        <div class="overlap-6">
-                                            <img src="../../resource/images/person.png" width="30px" height="30px" style="vertical-align: middle;margin-left: 50px; margin-top: 20px;"/>
-                                            <div class="text-wrapper-11">Aditya Roy</div>
-                                            <button><div class="overlap-7"><div class="text-wrapper-9">Accept</div></div></button>
-                                            <button><div class="overlap-8"><div class="text-wrapper-10">Reject</div></div></button>
-                                        </div>
-                                        <div class="overlap-9">
-                                            <img src="../../resource/images/person.png" width="30px" height="30px" style="vertical-align: middle;margin-left: 50px; margin-top: 20px;"/>
-                                            <div class="text-wrapper-14">Elvish Yadav</div>
-                                            <button><div class="overlap-10"><div class="text-wrapper-12">Accept</div></div></button>
-                                            <button><div class="overlap-11"><div class="text-wrapper-13">Reject</div></div></button>
-                                        </div>
-                                        <div class="overlap-12">
-                                            <img src="../../resource/images/person.png" width="30px" height="30px" style="vertical-align: middle;margin-left: 50px; margin-top: 20px;"/>
-                                            <div class="text-wrapper-16">Ritvik Sonune</div>
-                                            <button><div class="overlap-14"><div class="text-wrapper-7">Accept</div></div></button>
-                                            <button><div class="overlap-13"><div class="text-wrapper-15">Reject</div></div></button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -328,7 +342,29 @@
         <!-- /footer content include -->
     </div>
 </div>
+<script>
+    function acceptEntry(button) {
+        var row = button.parentNode.parentNode; // Get the row
+        var id = row.cells[0].textContent; // Get the ID
+        var name = row.cells[1].textContent; // Get the Name
 
+        // Create a new row in the accepted table
+        var newRow = document.createElement('tr');
+        newRow.innerHTML = '<td>' + id + '</td><td>' + name + '</td>';
+        
+        // Append the new row to the accepted table
+        document.getElementById('acceptedTable').getElementsByTagName('tbody')[0].appendChild(newRow);
+        
+        // Remove the row from the entries table
+        row.parentNode.removeChild(row);
+    }
+
+    function rejectEntry(button) {
+        var row = button.parentNode.parentNode; // Get the row
+        // Remove the row from the entries table
+        row.parentNode.removeChild(row);
+    }
+</script>
 <!-- jQuery -->
 <script src="../../resource/js/jquery.min.js"></script>
 <!-- Bootstrap -->
