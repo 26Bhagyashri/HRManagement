@@ -9,7 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Human Resource Management Sysytem</title>
+    <title>Human Resource Management System</title>
 
     <!-- Bootstrap -->
     <link href="../../resource/css/bootstrap.css" rel="stylesheet">
@@ -156,16 +156,11 @@
                                 <span class="image"><img src="../../resource/images/img.png"  alt="Profile Image" /></span>
                                 <span>
                                   <span>Uniconverge Tech</span>
-                                 <!-- <span class="time"><?=$event['event_time']?></span>
-                                </span>-->
-                                <!--<span class="message">
-                                  <?=$event['subject']?>
-                               </span>-->
+                                 
                             </a>
                         </li>
                         
-                           }
-                        ?>
+                           
                         <li>
                             <div class="text-center">
                                 <a href="../liveEvent/liveEvent.html">
@@ -180,17 +175,13 @@
         </nav>
     </div>
 </div>
-<!-- /top navigation -->
 
-        <!-- /side and top bar include -->
-
-        <!-- page content -->
         <div class="right_col" role="main">
             <div class="">
 
                 <div class="page-title">
                     <div class="title_left">
-                        <h3>Candidate History <small></small></h3>
+                        <h3>Candidate History <button onclick="displayHistory()" class="btn" style="background-color: #2196F3;color: white; border-radius: 40px;:hover{background-color: aliceblue;color: black;}">Refresh</button></h3>
                     </div>
 
                     <div class="title_right">
@@ -211,8 +202,8 @@
 
                     <div class="col-md-12 col-sm-12 col-xs-12">
                         <div class="x_panel">
-                            <div class="x_title">
-                                <h2>RESUME SHORT LIST <small></small></h2>
+                            <div class="x_title" style="background-color: rgba(78, 109, 165, 0.546);">
+                                <h2>List of Shortlisted candidates <small></small></h2>
                                 <ul class="nav navbar-right panel_toolbox">
                                     <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                                     </li>
@@ -230,124 +221,59 @@
                                 </ul>
                                 <div class="clearfix"></div>
                             </div>
-                            <div class="x_content">
-
-                                <p class="text-muted font-13 m-b-30">
-
-                                </p>
-                                <!-- ... [The rest of the HTML code remains unchanged] ... -->
-
-<div class="x_content">
-    <p class="text-muted font-13 m-b-30"></p>
-
-    <table id="datatable-buttons" class="table table-striped table-bordered">
-        <thead>
-        <tr>
-            <th>Candidate</th>
-            <th>Applied position</th>
-            <th>Email</th>
-            <th>Contact</th>
-            <th>Process</th>
-        </tr>
-        </thead>
-        <tbody>
-        <?php
-        foreach ($events as $event){
-        ?>
-        <tr>
-            <td><?=$event['candidate']?></td>
-            <td><?=$event['position']?></td>
-            <td><?=$event['email']?></td>
-            <td><?=$event['contact']?></td>
-           
-            <td>
-                <?php
-                if($event['status']==1){
-                    echo "Due Event";
-                }else{
-                    echo "Event Abandon";
-                }
-                ?>
-            </td>
-        </tr>
-        <?php
-       }
-        ?>
-        </tbody>
-    </table>
-</div>
-
-<!-- ... [The rest of the HTML code remains unchanged] ... -->
-
-<script>
-    // JavaScript to calculate the number of leaves based on the start and end dates
-    document.querySelectorAll('.leave-start-date, .leave-end-date').forEach(input => {
-        input.addEventListener('change', function() {
-            const candidateId = this.dataset.candidateId;
-            const startDateInput = document.querySelector(`.leave-start-date[data-candidate-id="${candidateId}"]`);
-            const endDateInput = document.querySelector(`.leave-end-date[data-candidate-id="${candidateId}"]`);
-            const leaveCountSpan = document.querySelector(`.leave-count[data-candidate-id="${candidateId}"]`);
-
-            const startDate = new Date(startDateInput.value);
-            const endDate = new Date(endDateInput.value);
-
-            if (startDate && endDate) {
-                const diffTime = Math.abs(endDate - startDate);
-                const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)) + 1; // +1 to include both start and end dates
-                leaveCountSpan.textContent = diffDays;
-            } else {
-                leaveCountSpan.textContent = '';
-            }
-        });
-    });
-</script>
-
-
-                                    </tr>
+                            <div class="x_content" style="background-color: rgba(77, 150, 214, 0.473);">
+                            
+                        
+                                <h2>Candidate History</h2>
+                                <table id="acceptedTableHistory" style="padding: 30px 30px 30px 30px;">
+                                    <thead style="margin-right: 30px;">
+                                        <tr>
+                                            <th>ID</th>
+                            
+                                            <th>Name</th>
+                            
+                                        </tr>
                                     </thead>
                                     <tbody>
-                                    <?php
-                                    foreach ($events as $event){
-                                    ?>
-                                    <tr>
-                                        <td><?=$event['candidate']?></td>
-                                        <td><?=$event['position']?></td>
-                                        <td><?=$event['email']?></td>
-                                        <td><?=$event['contact']?></td>
-                                        <td>
-                                            <?php
-                                            if($event['status']==1){
-                                                echo "Due Event";
-                                            }else{
-                                                echo "Event Abandon";
-                                            }
-                                            ?>
-                                        </td>
-                                        <!-- <td>Show/Edit/Delete</td> -->
-                                    </tr>
-                                    <?php
-                                   }
-                                    ?>
+                                        <!-- Accepted entries will appear here -->
                                     </tbody>
-                                </table> -->
+                                </table>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- /page content -->
+   
+<!-- ... [The rest of the HTML code remains unchanged] ... -->
+<!-- footer content include -->
+<div class="footer" style="position: fixed;
+left: 0;
+bottom: 0;
+width: 100%;
+background-color: #e0e3ea;
+padding-top: 25px;">
 
-        <!-- footer content include -->
-        <footer>
-            <div class="pull-right">
-                Human Resource Management Sysytem by <a href="#">Uniconverge Tech</a>
-            </div>
-            <div class="clearfix"></div>
-        </footer>
-        <!-- /footer content include -->
+    <div class="pull-right">
+        Human Resource Management System by <a href="#">Uniconverge Tech</a>
     </div>
+    <div class="clearfix"></div>
 </div>
+<!-- /footer content include -->
+<script>
+
+        var acceptedTable = window.opener.acceptedTable;
+    
+        function displayHistory(){
+        
+            var acceptedTableHistory = document.getElementById("acceptedTableHistory");
+            acceptedTableHistory.innerHTML = " "
+
+            acceptedTableHistory.appendChild(acceptedTable);
+        }
+        //window.onload = displayHistory;
+
+</script>
+    
+
+        
+    
 
 <!-- jQuery -->
 <script src="../../resource/js/jquery.min.js"></script>
